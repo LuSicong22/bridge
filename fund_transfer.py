@@ -12,8 +12,8 @@ class BlockchainTransfer:
         self.eth_web3 = Web3(Web3.HTTPProvider(eth_provider))
         self.mantle_web3 = Web3(Web3.HTTPProvider(mantle_provider))
         self.private_key = private_key
-        self.eth_web3.middleware_stack.add(geth_poa_middleware)
-        self.mantle_web3.middleware_stack.add(geth_poa_middleware)
+        self.eth_web3.middleware_onion.inject(geth_poa_middleware, layer=0)
+        self.mantle_web3.middleware_onion.inject(geth_poa_middleware, layer=0)
 
     def _get_balance(self, web3: Web3, address: str) -> Union[int, None]:
         try:
