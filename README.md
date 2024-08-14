@@ -94,5 +94,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Provider URLs and Private Key**: You need to replace placeholders in `fund_transfer.py` with actual node URLs and a private key. Ensure that these credentials are stored securely, especially when deploying in a production environment.
 - **Network Conditions**: Keep an eye on network congestion and adjust gas prices accordingly. Consider implementing dynamic gas price adjustment if the tool will be used in varying network conditions.
 - **Further Enhancements**: For a production-ready tool, consider implementing features such as dynamic gas price adjustments, retry mechanisms, and improved logging and error handling. 
-
-This `README.md` provides a comprehensive guide to setting up and using the fund transfer tool, as well as considerations for security and deployment. Adjust details based on your specific repository, usage, and deployment strategies.
